@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dupeito. – coming soon</title>
+<meta name="description" content="dupeito. – the smart dupe finder for makeup, skincare, hair and fragrance. Coming soon.">
+<meta property="og:title" content="dupeito. – coming soon">
+<meta property="og:description" content="Luxury looks, smaller prices. Join the list.">
+<meta name="theme-color" content="#4B1621">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#4B1621; --wine-2:#5A2330; --line:#8A4A57;
+  --beige:#F7ECE4; --shelf:#E2CFC1; --pink:#E8C3CB; --rose:#B9586C; --neck:#D4A5AF;
+  --cream:#F1DCD3; --muted:#D4B3BA;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--wine);color:var(--beige)}
+body{font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--pink)}a:hover{color:var(--beige)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.serif{font-family:'Instrument Serif',serif}
+
+.page{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:32px clamp(20px,4vw,56px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-size:30px;color:var(--pink);line-height:1}
+.lang{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px}
+.lang button{min-width:44px;height:36px;border:0;border-radius:999px;font:inherit;font-size:13px;font-weight:600;letter-spacing:.06em;cursor:pointer;background:transparent;color:var(--pink)}
+.lang button[aria-pressed="true"]{background:var(--pink);color:var(--wine)}
+
+h1{margin:24px 0 0;text-align:center;font-weight:700;font-size:clamp(36px,5vw,64px);letter-spacing:.02em;line-height:1;color:var(--cream)}
+
+main{flex-grow:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(24px,4vw,64px);padding:28px 0}
+.flank{margin:0;flex:1 1 220px;max-width:300px;font-style:italic;font-size:clamp(26px,2.6vw,34px);line-height:1.2;color:var(--pink);white-space:pre-line}
+.flank.left{text-align:right}
+
+.keyhole{position:relative;width:min(380px,78vw);aspect-ratio:5/8;overflow:hidden;flex-shrink:0}
+.scene{position:absolute;inset:0;background:var(--beige);color:var(--wine)}
+.peek{position:absolute;left:0;right:0;top:23%;margin:0;text-align:center;font-style:italic;font-size:30px;line-height:1}
+.peek-sub{position:absolute;left:0;right:0;top:33%;margin:0;text-align:center;font-size:24px}
+.shelf{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);display:grid;grid-template-columns:50px 50px 2px 22px 22px;column-gap:9px;justify-items:center;align-items:end}
+.item{display:flex;flex-direction:column;align-items:center}
+.shelf .board{grid-column:1/-1;justify-self:stretch;height:6px;margin:0 -200px;background:var(--shelf)}
+.price{font-size:20px;line-height:1.3}
+.perfume .cap{width:24px;height:19px;background:var(--wine);border-radius:6px 6px 2px 2px}
+.perfume .neck{width:12px;height:8px;background:var(--neck)}
+.perfume .body{width:50px;height:58px;background:var(--pink);border-radius:12px}
+.lipstick .bullet{width:15px;height:20px;background:var(--rose);clip-path:polygon(0 35%,100% 0,100% 100%,0 100%)}
+.lipstick .ring{width:20px;height:10px;background:var(--wine)}
+.lipstick .body{width:22px;height:42px;background:var(--pink);border-radius:2px 2px 4px 4px}
+.mask{position:absolute;left:-2px;top:-2px;width:calc(100% + 4px);height:calc(100% + 4px);pointer-events:none}
+
+.signup{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.list{margin:0;font-size:clamp(20px,2.2vw,28px);font-weight:500}
+form{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;width:100%;max-width:460px}
+input{flex:1 1 220px;min-width:0;height:50px;border-radius:999px;border:1px solid var(--line);background:var(--wine-2);color:var(--beige);padding:0 22px;font:inherit;font-size:16px}
+input::placeholder{color:#B88E97}
+input:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+.cta{height:50px;border:0;border-radius:999px;background:var(--pink);color:var(--wine);padding:0 24px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.cta:disabled{opacity:.6;cursor:default}
+.msg{margin:0;min-height:1.4em;font-size:14px;color:var(--pink)}
+@media (max-width:640px){.flank,.flank.left{flex-basis:100%;max-width:none;text-align:center}.shelf{transform:translateX(-50%) scale(.82);transform-origin:50% 100%}}
+footer{margin-top:10px;text-align:center;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo serif">dupeito.</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang-btn="cs" aria-pressed="false">CZ</button>
+    </div>
+  </header>
+
+  <h1 data-i18n="headline">COMING SOON</h1>
+
+  <main>
+    <p class="flank left serif" data-i18n="left">Pssst…</p>
+
+    <div class="keyhole" aria-hidden="true">
+      <div class="scene">
+        <p class="peek serif" data-i18n="peek">the dupe shelf</p>
+        <p class="peek-sub serif">$$$ → $</p>
+        <div class="shelf">
+          <div class="item perfume"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+          <div class="item perfume"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+          <div></div>
+          <div class="item lipstick"><div class="bullet"></div><div class="ring"></div><div class="body"></div></div>
+          <div class="item lipstick"><div class="bullet"></div><div class="ring"></div><div class="body"></div></div>
+          <div class="board"></div>
+          <div class="price serif">$$$</div>
+          <div class="price serif">$</div>
+          <div></div>
+          <div class="price serif">$$$</div>
+          <div class="price serif">$</div>
+        </div>
+      </div>
+      <svg class="mask" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <defs>
+          <filter id="fz" filterUnits="userSpaceOnUse" x="0" y="0" width="1" height="1"><feGaussianBlur stdDeviation="0.03 0.019"/></filter>
+          <mask id="hole" maskUnits="userSpaceOnUse" x="0" y="0" width="1" height="1">
+            <rect x="0" y="0" width="1" height="1" fill="#fff"/>
+            <path d="M0.356,0.49 A0.36,0.23 0 1 1 0.644,0.49 L0.806,0.95 L0.194,0.95 Z" fill="#000" filter="url(#fz)"/>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="1" height="1" fill="#4B1621" mask="url(#hole)"/>
+      </svg>
+    </div>
+
+    <p class="flank serif" data-i18n="right">…something’s
+coming.</p>
+  </main>
+
+  <section class="signup">
+    <p class="list" data-i18n="list">Only for those on the list.</p>
+    <form id="signup" novalidate>
+      <label for="email" class="sr" data-i18n="emailLabel">Email address</label>
+      <input id="email" name="email" type="email" autocomplete="email" required data-i18n-placeholder="placeholder" placeholder="your@email.com">
+      <button class="cta" type="submit" data-i18n="cta">Join the list</button>
+    </form>
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    <footer><span data-i18n="footer">dupeito.com · smart dupe finder</span> · <a href="[INSTAGRAM URL]">[@instagram]</a></footer>
+  </section>
+
+</div>
+
+<script>
+// ↓↓↓ Sem vlož adresu formuláře (např. z Formspree: https://formspree.io/f/xxxxxx).
+// Dokud je prázdná, e-maily se NIKAM neukládají.
+const FORM_ENDPOINT = '';
+
+const copy = {
+  en: {
+    headline: 'COMING SOON',
+    left: 'Pssst…',
+    right: '…something’s\ncoming.',
+    peek: 'the dupe shelf',
+    list: 'Only for those on the list.',
+    emailLabel: 'Email address',
+    placeholder: 'your@email.com',
+    cta: 'Join the list',
+    footer: 'dupeito.com · smart dupe finder',
+    ok: 'You’re on the list. We’ll send you the key.',
+    invalid: 'Please enter a valid email.',
+    error: 'Something went wrong. Try again in a moment.',
+    notReady: 'The list opens very soon.'
+  },
+  cs: {
+    headline: 'UŽ BRZY',
+    left: 'Pssst…',
+    right: '…něco se\nchystá.',
+    peek: 'police s dupes',
+    list: 'Jen pro ty, kdo jsou na seznamu.',
+    emailLabel: 'E-mailová adresa',
+    placeholder: 'tvuj@email.cz',
+    cta: 'Chci na seznam',
+    footer: 'dupeito.com · chytrý vyhledávač dupes',
+    ok: 'Jsi na seznamu. Klíč ti pošleme.',
+    invalid: 'Zadej prosím platný e-mail.',
+    error: 'Něco se pokazilo. Zkus to prosím za chvíli.',
+    notReady: 'Seznam otevíráme už brzy.'
+  }
+};
+
+let lang = 'en';
+try {
+  lang = localStorage.getItem('dupeito-lang') ||
+         ((navigator.language || '').toLowerCase().startsWith('cs') || (navigator.language || '').toLowerCase().startsWith('sk') ? 'cs' : 'en');
+} catch (e) {}
+
+function setLang(l) {
+  lang = copy[l] ? l : 'en';
+  const t = copy[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t[el.dataset.i18n]; });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t[el.dataset.i18nPlaceholder]; });
+  document.querySelectorAll('[data-lang-btn]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.langBtn === lang)));
+  document.getElementById('msg').textContent = '';
+  try { localStorage.setItem('dupeito-lang', lang); } catch (e) {}
+}
+document.querySelectorAll('[data-lang-btn]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.langBtn)));
+setLang(lang);
+
+const form = document.getElementById('signup');
+const msg = document.getElementById('msg');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const t = copy[lang];
+  const email = form.email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = t.invalid; return; }
+  if (!FORM_ENDPOINT) { msg.textContent = t.notReady; return; }
+  const btn = form.querySelector('button');
+  btn.disabled = true;
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email, lang })
+    });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    msg.textContent = t.ok;
+  } catch (err) {
+    msg.textContent = t.error;
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
